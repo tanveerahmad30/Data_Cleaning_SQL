@@ -29,7 +29,7 @@ from sales
 )
 delete
 from duplicate_check 
-where transaction_id in(1001,1004,1030,1074)
+where row_num > 1;
 
 ------------------------------------------------------------------------------------------
 --Step 3 :- Check For Null Values
@@ -229,4 +229,5 @@ from INFORMATION_SCHEMA.columns
 where table_name='Sales';
 
 alter table sales
+
 alter column purchase_date date;
